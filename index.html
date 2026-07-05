@@ -14,8 +14,7 @@
         <h1 id="tituloInicio">GuiaExplorador.js</h1>
         <p class="parrafo">Libreria de ayuda visual interactiva creada con JavaScript puro</p>
 
-        <button id="botonIniciarTour" name="botonIniciarTour" class="boton"
-            data-tooltip="Haz clic aqui para iniciar la guia interactiva">
+        <button id="botonIniciarTour" name="botonIniciarTour" class="boton">
             Iniciar guia
         </button>
 
@@ -32,12 +31,12 @@
             <h2>Componentes incluidos</h2>
             <p>GuiaExplorador.js incluye dos componentes fundamentales para una buena exploracion del usuario</p>
             <div class="lista-cajas">
-                <div class="caja" data-tooltip="Guia al usuario paso a paso dentro de la página">
+                <div class="caja" id="cajaTour">
                     <h3>TourJS</h3>
                     <p>Es una herramienta que sirve de recorrido interactivo que muestra instrucciones.</p>
                 </div>
 
-                <div class="caja" data-tooltip="Muestra mensajes de ayuda cuando pasas el mouse">
+                <div class="caja" id="cajaTooltip">
                     <h3>TooltipJS</h3>
                     <p>Es una herramienta que muestra mensajes de ayuda rápida para botones, textos o tarjetas.</p>
                 </div>
@@ -51,18 +50,15 @@
             <form class="formulario">
                 <div class="campo">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="entrada" placeholder="Escribe tu nombre"
-                        data-tooltip="Aqui puedes ingresar tu nombre completo">
+                    <input type="text" id="nombre" name="nombre" class="entrada" placeholder="Escribe tu nombre">
                 </div>
 
                 <div class="campo">
                     <label for="correo">Correo:</label>
-                    <input type="email" id="correo" name="correo" class="entrada" placeholder="correo@ejemplo.com"
-                        data-tooltip="Ingresa un correo válido para recibir información">
+                    <input type="email" id="correo" name="correo" class="entrada" placeholder="correo@ejemplo.com">
                 </div>
 
-                <button type="button" id="botonEnviar" class="boton"
-                    data-tooltip="Este botón simula el envio del formulario">
+                <button type="button" id="botonEnviar" class="boton">
                     Enviar datos
                 </button>
             </form>

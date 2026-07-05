@@ -5,8 +5,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #baebfb;
-    /* Color azul clarito de fondo */
+    background-color: #e8f5e9;
+    /* Color verde muy clarito de fondo */
     margin: 0;
     padding: 40px;
 }
@@ -53,13 +53,14 @@ body {
 }
 
 .tarjeta h2 {
-    color: #044dd5;
+    color: #1b4332;
+    /* Verde bosque profundo */
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .tarjeta p {
-    color: #444;
+    color: #000000;
     line-height: 1.5;
     margin-bottom: 10px;
 }
@@ -72,16 +73,16 @@ body {
 }
 
 .caja {
-    background-color: #f7fcff;
+    background-color: #f1f8f1;
     padding: 15px;
-    border-radius: 15px;
-    border: 1px solid #bce0fd;
+    border-radius: 30px;
+    border: 1px solid #95d5b2;
     text-align: center;
 }
 
 .caja h3 {
     margin: 0 0 10px 0;
-    color: #044dd5;
+    color: #2d6a4f;
     font-size: 18px;
 }
 
@@ -119,8 +120,8 @@ body {
 
 /* focus: ocurre cuando le das clic adentro para escribir */
 .entrada:focus {
-    border-color: #044dd5;
-    /* Cambia a azul cuando estás escribiendo */
+    border-color: #52b788;
+    /* Cambia a un verde brillante cuando estás escribiendo */
 }
 
 .contenedor-imagen {
@@ -141,8 +142,8 @@ body {
     margin: 0 auto;
     /* Centra el botón horizontalmente */
     padding: 12px 20px;
-    background-color: #044dd5;
-    /* Color original del botón */
+    background-color: #2d6a4f;
+    /* Color verde explorador para el botón */
     color: white;
     /* Color del texto */
     border: none;
@@ -158,8 +159,8 @@ body {
 
 /* hover: ocurre cuando pasas el ratón (mouse) por encima */
 .boton:hover {
-    background-color: #5da5e9;
-    /* Cambia a un azul más claro */
+    background-color: #1b4332;
+    /* Cambia a un verde bosque más oscuro al pasar el mouse */
 }
 
 .pie {
@@ -186,11 +187,25 @@ body {
 
     .lista-cajas {
         grid-template-columns: 1fr;
-        /* Mostrar componentes en una sola columna en móviles */
+        /* Mostrar componentes en una sola columna en telefonos */
     }
 
     .boton {
         width: 100%;
-        /* Botones de ancho completo en móviles para facilitar toque */
+        /* Botones de ancho completo en telefonos para facilitar toque */
     }
+}
+
+/* --- ESTILOS PARA LOS COMPONENTES DE LA LIBRERÍA (GuiaExplorador.js) --- */
+
+.tooltip-flotante {
+    position: absolute; /* Permite moverlo libremente por coordenadas */
+    background-color: #1b4332; /* Verde bosque oscuro (paleta selva) */
+    color: white; /* Texto blanco para contrastar */
+    padding: 8px 12px;
+    border-radius: 8px; /* Esquinas ligeramente redonditas */
+    font-size: 14px;
+    pointer-events: none; /* Evita que el ratón interfiera con la caja */
+    z-index: 1000; /* Lo pone por encima de absolutamente todo */
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3); /* Sombra para que flote visualmente */
 }
