@@ -85,7 +85,7 @@ Esta función asigna un mensaje de ayuda a cualquier elemento de tu HTML usando 
 
 **JavaScript (`index.js`):**
 ```javascript
-// Agrega un mensaje que seguirá al ratón al pasar sobre el input
+// Agrega un mensaje que seguira al mouse al pasar sobre el input
 agregarAyuda("nombreUsuario", "Ayuda: Ingresa aquí tu nombre completo empezando por apellidos.");
 ```
 
@@ -106,10 +106,10 @@ Inicia un recorrido interactivo por la página. Recibe un arreglo de objetos don
 // Obtenemos el boton que iniciara el tour
 let botonInicioTour = document.getElementById("iniciarGuia");
 
-// Al darle clic, se ejecutará la función iniciarTour
+// Al darle clic, se ejecutara la función iniciarTour
 botonInicioTour.addEventListener("click", iniciarTour);
 
-// Esta función contiene los pasos que se van a mostrar en la guía
+// Esta funcion contiene los pasos que se van a mostrar en la guia
 function iniciarTour() {
     crearTour([
         // Cada grupo entre { } es un paso del tour
@@ -133,7 +133,7 @@ function iniciarTour() {
 A continuación se demuestra el funcionamiento visual de los componentes implementados en el proyecto de prueba:
 
 ### 1. TooltipJS en acción
-*El mensaje emergente sigue de manera fluida al cursor del ratón al pasar sobre un elemento.*
+*El mensaje emergente sigue de manera fluida al cursor del mouse al pasar sobre un elemento.*
 ![TooltipJS demostración 1](img/tooltip1.png)
 ![TooltipJS demostración 2](img/tooltip2.png)
 
