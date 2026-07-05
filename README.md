@@ -42,20 +42,22 @@
 
 <p align="center">
   <strong>Fecha de entrega:</strong><br>
-  06 de julio del 2026
+  05 de julio del 2026
 </p>
 
 ---
 
 ## ¿Qué problema resuelve?
 
-En muchas páginas web y aplicaciones, los usuarios de nuevo ingreso suelen sentirse perdidos al no entender para qué sirve cada botón, sección o formulario. Esto genera frustración, errores de llenado y abandono de la página.
+No te ha pasado que entras a un pagina web, aplicacion web o un sitio y al momento en que entras noo sabes a donde picar o como dezplasarte o simplemente no entiendes el comportamiento de la pagina? Esto sucede para muchos usuarios. Esto genera frustracion, errores de llenado y hasta que lleguen a abandonar la pagina.
 
-Mi librería **GuiaExplorador.js** resuelve este problema proporcionando dos componentes visuales modulares y muy fáciles de implementar:
-1. **TooltipJS:** Muestra pequeños mensajes de ayuda que siguen al cursor del ratón, indicando exactamente qué hace cada elemento de la interfaz sin saturar la pantalla.
-2. **TourJS:** Una guía interactiva paso a paso que lleva al usuario de la mano por toda la página. Este componente desplaza la pantalla (scroll automático) hacia el objetivo y resalta la sección que se está explicando mediante un marco visual atractivo.
+Mi librería **GuiaExplorador.js** resuelve este problema proporcionando dos componentes visuales muy fáciles de implementar:
+El primero es:
+1. **TooltipJS:** Muestra pequeños mensajes de ayuda que siguen al cursor del mouse, indicando exactamente que hace cada elemento de la interfaz.
+El segundo es:
+2. **TourJS:** Es una guía interactiva paso a paso que lleva al usuario de la mano por toda la página. Este muestra  resaltando la seccion que se esta explicando mediante un marco visual
 
-Ambos componentes fueron creados con lógica de Vanilla JavaScript, eliminando la necesidad de usar dependencias externas y permitiendo a cualquier desarrollador configurarlo en su propio `index.js` de manera totalmente personalizable.
+Ambos componentes fueron creados con JavaScript, eliminando la necesidad de usar dependencias externas y permitiendo a cualquier desarrollador configurarlo en su propio `index.js` de manera totalmente personalizable.
 
 ## Instalación
 
@@ -71,7 +73,7 @@ Para utilizar **GuiaExplorador.js** en tus proyectos, debes incluir la hoja de e
 
 ## Uso y Ejemplos
 
-La librería está diseñada para ser completamente modular. Las funciones de configuración se mandan a llamar desde tu propio archivo JavaScript principal (por ejemplo, `index.js`).
+La librería está hecha para usarse de forma sencilla. Sus funciones se pueden llamar desde tu archivo principal de JavaScript, por ejemplo desde index.j
 
 ### 1. `agregarAyuda(idElemento, mensaje)` - (TooltipJS)
 Esta función asigna un mensaje de ayuda a cualquier elemento de tu HTML usando su atributo `id`.
@@ -124,23 +126,28 @@ function iniciarTour() {
     ]);
 }
 ```
-*Nota: El componente se encargará automáticamente de crear la caja de diálogo interactiva en la esquina inferior derecha, hacer scroll hacia cada elemento de manera fluida y resaltarlo visualmente.*
+
 
 ## Capturas de Pantalla
 
 A continuación se demuestra el funcionamiento visual de los componentes implementados en el proyecto de prueba:
 
 ### 1. TooltipJS en acción
-![TooltipJS demostración](img/tooltip.png)
 *El mensaje emergente sigue de manera fluida al cursor del ratón al pasar sobre un elemento.*
+![TooltipJS demostración 1](img/tooltip1.png)
+![TooltipJS demostración 2](img/tooltip2.png)
+
 
 ### 2. TourJS navegando por la página
-![TourJS en progreso](img/tour.png)
 *La caja del tour se posiciona de forma fija en la esquina inferior derecha para no obstruir el contenido. Mientras tanto, la sección activa se centra automáticamente y se resalta con un marco.*
+![TourJS en progreso 1](img/tour1.png)
+![TourJS en progreso 2](img/tour2.png)
+![TourJS en progreso 1](img/tour2.png)
+![TourJS en progreso 2](img/tour3.png)
 
 ## Video Demostrativo
 
-En el siguiente video (formato pitch comercial de 1 minuto), se demuestra en tiempo real el problema que resuelve la librería, la sencillez de su implementación y el resultado visual final interactuando con los dos componentes.
+En el siguiente video se demuestra en tiempo real el problema que resuelve la librería
 
 [**Ver Video Demostrativo en YouTube**](https://youtu.be/ENLACE_DE_TU_VIDEO)
 
@@ -148,6 +155,6 @@ En el siguiente video (formato pitch comercial de 1 minuto), se demuestra en tie
 
 Puedes acceder al código fuente completo y ver la demostración en vivo de los componentes en los siguientes enlaces:
 
-[**Ver Repositorio**](https://github.com/Angixs-zz/Actividad3-ComponenteVisual)
+[**Ver Repositorio**](https://github.com/Angixs-zz/Act3-Componente)
 
-[**Ver Página en Vivo**](https://angixs-zz.github.io/Actividad3-ComponenteVisual/index.html)
+[**Ver Página en Vivo**](https://angixs-zz.github.io/Act3-Componente/)
