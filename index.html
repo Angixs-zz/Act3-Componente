@@ -5,43 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuiaExplorador.js - Componente Visual</title>
-
     <link rel="stylesheet" href="css/componente.css">
 </head>
 
 <body>
-    <header class="encabezado" id="seccionInicio">
-        <h1>GuiaExplorador.js</h1>
-        <p>Libreria de ayuda visual interactiva creada con JavaScript puro</p>
 
-        <button id="botonIniciarTour" name="botonIniciarTour" class="boton-principal"
+    <main class="contenedor">
+        <h1 id="tituloInicio">GuiaExplorador.js</h1>
+        <p class="parrafo">Libreria de ayuda visual interactiva creada con JavaScript puro</p>
+
+        <button id="botonIniciarTour" name="botonIniciarTour" class="boton"
             data-tooltip="Haz clic aqui para iniciar la guia interactiva">
             Iniciar guia
         </button>
-    </header>
-
-    <main class="contenedor">
 
         <section class="tarjeta" id="seccionProblema">
             <h2>¿Qué problema resuelve?</h2>
             <p>
-                Muchas páginas tienen botones o secciones que el usuario no entiende al primer vistazo.
-                GuiaExplorador.js ayuda mostrando explicaciones visuales paso a paso.
+                En internet o en muchas aplicaciones web nos encontramos con botones o
+                secciones que el usuario no entiende al primer mommento de consultar la pagina.
+                GuiaExplorador.js resuelve este problema, pues ayuda mostrando explicaciones visuales paso a paso.
             </p>
         </section>
 
         <section class="tarjeta" id="seccionComponentes">
             <h2>Componentes incluidos</h2>
-
-            <div class="grid-componentes">
-                <div class="componente-card" data-tooltip="Guia al usuario paso a paso dentro de la página">
+            <p>GuiaExplorador.js incluye dos componentes fundamentales para una buena exploracion del usuario</p>
+            <div class="lista-cajas">
+                <div class="caja" data-tooltip="Guia al usuario paso a paso dentro de la página">
                     <h3>TourJS</h3>
-                    <p>Recorrido interactivo que resalta elementos y muestra instrucciones.</p>
+                    <p>Es una herramienta que sirve de recorrido interactivo que muestra instrucciones.</p>
                 </div>
 
-                <div class="componente-card" data-tooltip="Muestra mensajes de ayuda cuando pasas el mouse">
+                <div class="caja" data-tooltip="Muestra mensajes de ayuda cuando pasas el mouse">
                     <h3>TooltipJS</h3>
-                    <p>Mensajes flotantes de ayuda rápida para botones, textos o tarjetas.</p>
+                    <p>Es una herramienta que muestra mensajes de ayuda rápida para botones, textos o tarjetas.</p>
                 </div>
             </div>
         </section>
@@ -50,16 +48,21 @@
             <h2>Ejemplo de formulario</h2>
             <p>Pasa el mouse sobre los campos para ver los tooltips.</p>
 
-            <form class="formulario-demo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"
-                    data-tooltip="Aqui puedes ingresar tu nombre completo">
+            <form class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="entrada" placeholder="Escribe tu nombre"
+                        data-tooltip="Aqui puedes ingresar tu nombre completo">
+                </div>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com"
-                    data-tooltip="Ingresa un correo válido para recibir información">
+                <div class="campo">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" class="entrada" placeholder="correo@ejemplo.com"
+                        data-tooltip="Ingresa un correo válido para recibir información">
+                </div>
 
-                <button type="button" class="boton-secundario" data-tooltip="Este botón simula el envio del formulario">
+                <button type="button" id="botonEnviar" class="boton"
+                    data-tooltip="Este botón simula el envio del formulario">
                     Enviar datos
                 </button>
             </form>
@@ -67,46 +70,9 @@
 
     </main>
 
-    <footer class="pie" id="seccionFinal">
-        <p>Actividad 3. Componente Visual con JS</p>
-        <p>Programación Web</p>
-    </footer>
-
+    <script src="js/utileria.js"></script>
     <script src="js/componente.js"></script>
-
-    <script>
-        activarTooltips();
-
-        document.getElementById("botonIniciarTour").addEventListener("click", function () {
-            crearTour([
-                {
-                    elemento: "#seccionInicio",
-                    titulo: "Bienvenida",
-                    mensaje: "Esta es la sección principal donde se presenta la libreria GuiaExplorador.js."
-                },
-                {
-                    elemento: "#seccionProblema",
-                    titulo: "Problema que resuelve",
-                    mensaje: "Aqui se explica para qué sirve la libreria y cómo ayuda al usuario."
-                },
-                {
-                    elemento: "#seccionComponentes",
-                    titulo: "Componentes visuales",
-                    mensaje: "En esta parte se muestran los componentes incluidos: TourJS y TooltipJS."
-                },
-                {
-                    elemento: "#seccionEjemplo",
-                    titulo: "Formulario de ejemplo",
-                    mensaje: "Este formulario contiene tooltips que muestran ayuda al pasar el mouse."
-                },
-                {
-                    elemento: "#seccionFinal",
-                    titulo: "Fin del recorrido",
-                    mensaje: "Aqui termina la guia interactiva. El componente puede reutilizarse con otros pasos y textos."
-                }
-            ]);
-        });
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 

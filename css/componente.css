@@ -1,23 +1,36 @@
 * {
     box-sizing: border-box;
+    /* Evita que los bordes y márgenes rompan el tamaño */
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #baebfb;
+    /* Color azul clarito de fondo */
     margin: 0;
     padding: 40px;
+}
+
+#tituloInicio {
+    text-align: center;
+    /* Centrar el texto del título */
+}
+
+.parrafo {
+    text-align: center;
+    /* Centra el texto del párrafo horizontalmente */
 }
 
 .contenedor {
     width: 600px;
     max-width: 100%;
     margin: 0 auto;
+    /* El truco mágico para centrar contenedores horizontalmente */
     background-color: white;
     padding: 30px;
     border-radius: 32px;
+    /* Hace las esquinas redonditas */
     border: 1px solid #ddd;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .encabezado {
@@ -51,14 +64,14 @@ body {
     margin-bottom: 10px;
 }
 
-.grid-componentes {
+.lista-cajas {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-top: 15px;
 }
 
-.componente-card {
+.caja {
     background-color: #f7fcff;
     padding: 15px;
     border-radius: 15px;
@@ -66,13 +79,13 @@ body {
     text-align: center;
 }
 
-.componente-card h3 {
+.caja h3 {
     margin: 0 0 10px 0;
     color: #044dd5;
     font-size: 18px;
 }
 
-.componente-card p {
+.caja p {
     margin: 0;
     font-size: 14px;
 }
@@ -102,11 +115,12 @@ body {
     font-family: inherit;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.3s;
 }
 
+/* focus: ocurre cuando le das clic adentro para escribir */
 .entrada:focus {
     border-color: #044dd5;
+    /* Cambia a azul cuando estás escribiendo */
 }
 
 .contenedor-imagen {
@@ -122,24 +136,30 @@ body {
 }
 
 .boton {
+    display: block;
+    /* Trata al botón como un bloque independiente */
+    margin: 0 auto;
+    /* Centra el botón horizontalmente */
     padding: 12px 20px;
     background-color: #044dd5;
+    /* Color original del botón */
     color: white;
+    /* Color del texto */
     border: none;
+    /* Quitar el borde feo por defecto */
     border-radius: 10px;
     cursor: pointer;
+    /* Cambia el cursor a una manita */
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.1s;
     text-align: center;
+    /* Centra el texto dentro del botón */
 }
 
+/* hover: ocurre cuando pasas el ratón (mouse) por encima */
 .boton:hover {
     background-color: #5da5e9;
-}
-
-.boton:active {
-    transform: scale(0.98);
+    /* Cambia a un azul más claro */
 }
 
 .pie {
@@ -154,19 +174,23 @@ body {
 /* Consultas de medios (Media Queries) para diseño responsivo */
 @media (max-width: 768px) {
     body {
-        padding: 15px; /* Reducir padding en pantallas pequeñas para evitar desbordamiento */
+        padding: 15px;
+        /* Reducir padding en pantallas pequeñas para evitar desbordamiento */
     }
 
     .contenedor {
-        padding: 20px; /* Reducir padding interno del contenedor principal */
+        padding: 20px;
+        /* Reducir padding interno del contenedor principal */
         width: 100%;
     }
 
-    .grid-componentes {
-        grid-template-columns: 1fr; /* Mostrar componentes en una sola columna en móviles */
+    .lista-cajas {
+        grid-template-columns: 1fr;
+        /* Mostrar componentes en una sola columna en móviles */
     }
 
     .boton {
-        width: 100%; /* Botones de ancho completo en móviles para facilitar toque */
+        width: 100%;
+        /* Botones de ancho completo en móviles para facilitar toque */
     }
 }
