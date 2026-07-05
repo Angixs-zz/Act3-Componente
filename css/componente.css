@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #baebfb;
+    margin: 0;
+    padding: 40px;
+}
+
+.contenedor {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 32px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.titulo {
+    text-align: center;
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.tarjeta {
+    margin-bottom: 25px;
+}
+
+.tarjeta h2 {
+    color: #044dd5;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.grid-componentes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.componente-card {
+    background-color: #f7fcff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #bce0fd;
+    text-align: center;
+}
+
+.componente-card h3 {
+    margin: 0 0 10px 0;
+    color: #044dd5;
+    font-size: 18px;
+}
+
+.componente-card p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.entrada {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.entrada:focus {
+    border-color: #044dd5;
+}
+
+.contenedor-imagen {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagen {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.boton {
+    padding: 12px 20px;
+    background-color: #044dd5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: #5da5e9;
+}
+
+.boton:active {
+    transform: scale(0.98);
+}
+
+.pie {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 13px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+/* Consultas de medios (Media Queries) para diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* Reducir padding en pantallas pequeñas para evitar desbordamiento */
+    }
+
+    .contenedor {
+        padding: 20px; /* Reducir padding interno del contenedor principal */
+        width: 100%;
+    }
+
+    .grid-componentes {
+        grid-template-columns: 1fr; /* Mostrar componentes en una sola columna en móviles */
+    }
+
+    .boton {
+        width: 100%; /* Botones de ancho completo en móviles para facilitar toque */
+    }
+}
