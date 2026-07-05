@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi asistente.js - Componente Visual</title>
+
+    <link rel="stylesheet" href="css/componente.css">
+</head>
+<body>
+
+    <header class="encabezado" id="seccionInicio">
+        <h1>GuiaUI.js</h1>
+        <p>Librería de ayuda visual interactiva creada con JavaScript puro</p>
+
+        <button 
+            id="botonIniciarTour" 
+            class="boton-principal"
+            data-tooltip="Haz clic aquí para iniciar la guía interactiva">
+            Iniciar guía
+        </button>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="tarjeta" id="seccionProblema">
+            <h2>¿Qué problema resuelve?</h2>
+            <p>
+                Muchas páginas tienen botones o secciones que el usuario no entiende al primer vistazo.
+                GuiaUI.js ayuda mostrando explicaciones visuales paso a paso.
+            </p>
+        </section>
+
+        <section class="tarjeta" id="seccionComponentes">
+            <h2>Componentes incluidos</h2>
+
+            <div class="grid-componentes">
+                <div class="componente-card" data-tooltip="Guía al usuario paso a paso dentro de la página">
+                    <h3>TourJS</h3>
+                    <p>Recorrido interactivo que resalta elementos y muestra instrucciones.</p>
+                </div>
+
+                <div class="componente-card" data-tooltip="Muestra mensajes de ayuda cuando pasas el mouse">
+                    <h3>TooltipJS</h3>
+                    <p>Mensajes flotantes de ayuda rápida para botones, textos o tarjetas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarjeta" id="seccionEjemplo">
+            <h2>Ejemplo de formulario</h2>
+            <p>Pasa el mouse sobre los campos para ver los tooltips.</p>
+
+            <form class="formulario-demo">
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    id="nombre"
+                    name="nombre" 
+                    placeholder="Escribe tu nombre"
+                    data-tooltip="Aquí puedes ingresar tu nombre completo">
+
+                <label for="correo">Correo:</label>
+                <input 
+                    type="email" 
+                    id="correo"
+                    name="correo" 
+                    placeholder="correo@ejemplo.com"
+                    data-tooltip="Ingresa un correo válido para recibir información">
+
+                <button 
+                    type="button" 
+                    class="boton-secundario"
+                    data-tooltip="Este botón simula el envío del formulario">
+                    Enviar datos
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="pie" id="seccionFinal">
+        <p>Actividad 3. Componente Visual con JS</p>
+        <p>Programación Web</p>
+    </footer>
+
+    <script src="js/componente.js"></script>
+
+    <script>
+        activarTooltips();
+
+        document.getElementById("botonIniciarTour").addEventListener("click", function () {
+            crearTour([
+                {
+                    elemento: "#seccionInicio",
+                    titulo: "Bienvenida",
+                    mensaje: "Esta es la sección principal donde se presenta la librería GuiaUI.js."
+                },
+                {
+                    elemento: "#seccionProblema",
+                    titulo: "Problema que resuelve",
+                    mensaje: "Aquí se explica para qué sirve la librería y cómo ayuda al usuario."
+                },
+                {
+                    elemento: "#seccionComponentes",
+                    titulo: "Componentes visuales",
+                    mensaje: "En esta parte se muestran los componentes incluidos: TourJS y TooltipJS."
+                },
+                {
+                    elemento: "#seccionEjemplo",
+                    titulo: "Formulario de ejemplo",
+                    mensaje: "Este formulario contiene tooltips que muestran ayuda al pasar el mouse."
+                },
+                {
+                    elemento: "#seccionFinal",
+                    titulo: "Fin del recorrido",
+                    mensaje: "Aquí termina la guía interactiva. El componente puede reutilizarse con otros pasos y textos."
+                }
+            ]);
+        });
+    </script>
+
+</body>
+</html>
